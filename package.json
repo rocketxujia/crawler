@@ -1,0 +1,16 @@
+{
+  "name": "houseCrawler",
+  "version": "1.0.0",
+  "description": "crawler house of george",
+  "main": "index.js",
+  "scripts": {
+    "start": "node list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crawler": "^1.2.1",
+    "file-system": "^2.2.2"
+  }
+}
