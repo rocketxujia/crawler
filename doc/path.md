@@ -17,21 +17,14 @@
     // 房子id
     "productId": 9241205, 
     // 房子缩略小图
-    "thumbPhotos": [],  
+    "thumbPhotos": [
+        "https://static.my.ge/myhome/photos/thumbs/0418/9241205_1.jpg?v=8",
+        "https://static.my.ge/myhome/photos/thumbs/0418/9241205_2.jpg?v=8",
+    ],  
     // 房子高清大图
     "largePhotos": [
         "https://static.my.ge/myhome/photos/large/0418/9241205_1.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_2.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_3.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_4.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_5.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_6.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_7.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_8.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_9.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_10.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_11.jpg?v=8",
-        "https://static.my.ge/myhome/photos/large/0418/9241205_12.jpg?v=8"
+        "https://static.my.ge/myhome/photos/large/0418/9241205_2.jpg?v=8"
     ],
     // 房子标题
     "title": "Country house for sale",
