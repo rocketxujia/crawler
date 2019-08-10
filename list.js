@@ -28,10 +28,11 @@ function saveHouses($, pageNum) {
         $options = $card.find('div.options.d-flex');
         card = {
             productId: $card.data('product-id'),
-            thumb: 'https://static.my.ge/myhome/photos/large/' + $card.data('thumb'),
+            thumbPhotos: fetchHousePhotos($card, 'thumb'),
+            largePhotos: fetchHousePhotos($card, 'large'),
             title: $card.find('h5.card-title').text(),
-            price: $priceSpace.find('b.item-price').text() + '拉里',
-            sqPrice: $priceSpace.find('span.sq-price').text() + '拉里',
+            price: $priceSpace.find('b.item-price').text() + ' ₾',
+            sqPrice: $priceSpace.find('span.sq-price').text() + ' ₾',
             size: $priceSpace.find('div.item-size').text(),
             rooms: $options.find('div[data-tooltip="Number of rooms"]').text(),
             bedrooms: $options.find('div[data-tooltip="Bedroom"]').text(),
@@ -54,4 +55,19 @@ function crawlerList(){
         });
     }
     console.log(`开始下载所有房子数据...`);
+}
+
+function fetchHousePhotos($card, type) {
+    const $dots = $card.find('div.statement-dots-container span');
+    const picRoot = {
+        thumb: 'https://static.my.ge/myhome/photos/thumbs/',
+        large: 'https://static.my.ge/myhome/photos/large/'
+    }
+    const photoName = $card.data('thumb');
+    const photos = [];
+    for(var i = 1, len = $dots.length; i <= len; i++) {
+        let currentPhotoName = i === 1 ? photoName : photoName.replace(/_\d\.jpg\?*/,`_${i}.jpg?`)
+        photos.push(`${picRoot[type]}${currentPhotoName}`);   
+    }
+    return photos;
 }
